@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    so nc tieu thu *
+</pre>
+<script type="text/javascript">
+    function tinh_tien_nuoc(so_nuoc_tieu_thu,gia_muc_1 = 5000, gia_muc_2 = 8000, gia_muc_3 = 18000, gia_muc_4 = 23000, han_muc_1 = 10, han_muc_2 = 10, han_muc_3 = 30, phi_nuoc_thai = 2000, thue = 0.1 , tien_A_thu =0, tien_B_thu =0, tien_C_thu =0, tien_D_thu = 0, so_met_chua_thu_tien =0, tien_nuoc_tong =0,tien_nuoc_truoc_thue =0 , tien_nuoc_thai=0) {
+        so_nuoc_tieu_thu = i;
+        so_met_chua_thu_tien = so_nuoc_tieu_thu;
+        tien_nuoc_thai = so_nuoc_tieu_thu * phi_nuoc_thai;
+        if (so_met_chua_thu_tien > 10) {
+            tien_A_thu = gia_muc_1 * han_muc_1;
+            so_met_chua_thu_tien = so_met_chua_thu_tien - han_muc_1;
+        } else  { tien_A_thu = so_met_chua_thu_tien * gia_muc_1;
+        so_met_chua_thu_tien =0;
+    }
+    if (so_met_chua_thu_tien > 10) {
+            tien_B_thu = gia_muc_2 * han_muc_2;
+            so_met_chua_thu_tien = so_met_chua_thu_tien - han_muc_2;
+        } else { tien_B_thu = so_met_chua_thu_tien * gia_muc_2;
+
+    }
+    if (so_met_chua_thu_tien > 30) {
+            tien_C_thu = gia_muc_3 * han_muc_3;
+            so_met_chua_thu_tien = so_met_chua_thu_tien - han_muc_3;
+        } else { tien_C_thu = so_met_chua_thu_tien * gia_muc_3;
+
+    }
+    if (so_met_chua_thu_tien > 0) {
+            tien_D_thu = so_met_chua_thu_tien * gia_muc_4;
+
+    }
+
+
+
+         tien_nuoc_tong= tien_A_thu + tien_B_thu + tien_C_thu + tien_D_thu;
+         tien_nuoc_truoc_thue= tien_nuoc_tong +tien_nuoc_thai;
+        tien_thue= thue * tien_nuoc_truoc_thue;
+        tien_thanh_toan_thuc_te = tien_nuoc_truoc_thue + tien_thue ;
+        console.log("số tiền phải thu ở mức 1 từ 0 - 10 : " + tien_A_thu );
+        console.log("số tiền phải thu ở mức 2 từ 10 - 20 : " + tien_B_thu );
+        console.log("số tiền phải thu ở mức 3 từ 20 - 50 : " + tien_C_thu );
+        console.log("số tiền phải thu ở mức 4 tren 50 : " +tien_D_thu );
+        console.log("số tiền nước tổng : " + tien_nuoc_tong);
+        console.log("số tiền nước thải : " + tien_nuoc_thai);
+        console.log("số tiền thuế : " + tien_thue);
+        console.log("số tiền thanh toán cuối cùng : " + tien_thanh_toan_thuc_te);
+        return tien_thanh_toan_thuc_te;
+    }
+        var i=158;
+    var ketqua =tinh_tien_nuoc(i);
+    console.log("kết quả : " + ketqua);
+
+</script>
+</body>
+</html>
